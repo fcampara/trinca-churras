@@ -1,0 +1,30 @@
+@import "@/styles/variable.module.scss";
+
+.tr-input {
+  box-sizing: border-box;
+  height: 50px;
+  border-radius: 2px;
+  background-color:$white-color;
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 18px;
+  &::placeholder {
+    color: $black-color;
+    font-weight: 400;
+    font-size: 18px;
+    font-style: italic;
+  }
+}
+
+.tr-input__label {
+  font-weight: 700;
+  font-size: 21px;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: $black-color;
+  width: clamp(0px, 320px, 100%);
+  min-width: 0px;
+}
