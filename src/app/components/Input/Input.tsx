@@ -1,6 +1,6 @@
 import { FC, useId } from "react";
-import styles from '@/components/Input/input.module.scss'
-import { InputProps } from "@/components/Input/input.types";
+import styles from '@/app/components/Input/input.module.scss'
+import { InputProps } from "@/app/components/Input/input.types";
 
 const Input: FC<InputProps> = (props) => {
   const { label, ...restProps } = props;
