@@ -7,7 +7,8 @@
   background-color:$white-color;
   border: none;
   outline: none;
-  padding: 8px;
+  padding-block: 8px;
+  padding-inline: 16px;
   font-size: 18px;
   &::placeholder {
     color: $black-color;
@@ -23,7 +24,7 @@
   text-transform: capitalize;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
   color: $black-color;
   width: clamp(0px, 320px, 100%);
   min-width: 0px;

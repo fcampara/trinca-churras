@@ -1,0 +1,15 @@
+@import "@/styles/variable.module.scss";
+
+.tri-button {
+  border-radius: 18px;
+  height: 50px;
+  background-color: $black-color;
+  padding: 8px;
+  color: $white-color;
+  font-weight: 700;
+  font-size: 18px;
+  width: clamp(0px, 320px, 100%);
+  min-width: 0px;
+  border: none;
+  cursor: pointer;
+}
