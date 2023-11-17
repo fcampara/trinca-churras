@@ -1,6 +1,6 @@
 import { FC } from "react"
-import { ButtonProps } from "@/app/components/Button/button.types"
-import styles from "@/app/components/Button/button.module.scss"
+import { ButtonProps } from "@/components/Button/button.types"
+import styles from "@/components/Button/button.module.scss"
 
 const Button: FC<ButtonProps> = (props) => {
   const { type = "button", ...restProps } = props;

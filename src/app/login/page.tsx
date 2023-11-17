@@ -1,8 +1,6 @@
-"use client";
-
-import Input from "@/app/components/Input";
+import Input from "@/components/Input";
 import styles from "@/app/login/login.module.scss";
-import Button from "../components/Button";
+import Button from "../../components/Button";
 import submit from "@/app/login/actions";
 
 const PageLogin = () => {
