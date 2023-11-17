@@ -1,0 +1,14 @@
+@import "@/styles/variable.module.scss";
+
+.card {
+  border-radius: 2px;
+  padding: 24px;
+  box-shadow: 0px 0px 16px 0px #0000000F;
+  &--white {
+    background-color: $white-color;
+  }
+
+  &--gray {
+    background-color: $gray-color;
+  }
+}

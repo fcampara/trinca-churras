@@ -1,0 +1,17 @@
+@import "@/styles/variable.module.scss";
+
+.card-title__level {
+  color: $black-color;
+
+  &-1 {
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 32.87px;
+  }
+
+  &-2 {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 24.65px;
+  }
+}
