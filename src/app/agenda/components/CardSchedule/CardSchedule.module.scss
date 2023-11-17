@@ -1,0 +1,32 @@
+.card-schedule {
+  font-weight: 500;
+  size: 21px;
+  display: grid;
+  gap: 32px 0;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "principal principal"
+    "people amount";
+}
+
+.card-schedule__detail {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.card-schedule--principal {
+  grid-area: principal;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-schedule--people {
+  grid-area: people;
+}
+
+ .card-schedule--amount {
+  grid-area: amount;
+  justify-content: end;
+ }
