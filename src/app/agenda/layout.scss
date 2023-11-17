@@ -1,0 +1,5 @@
+@import "../../styles/variable.module.scss";
+
+.layout::after {
+  background-color: $white-color;
+}

@@ -1,6 +1,6 @@
 import { Raleway } from "next/font/google";
 import clsx from 'clsx'
-import styles from "@/app/layout.module.scss";
+import "@/app/layout.scss";
 import Image from "next/image";
 import Logo from '@/assets/images/logo.svg'
 
@@ -15,17 +15,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={clsx(styles["layout"], raleway.className)}>
+    <html lang="en" className={clsx("layout", raleway.className)}>
       <head>
         <title>Trinca Churras</title>
       </head>
 
-      <body className={styles["layout__body"]}>
+      <body className={"layout__body"}>
         <header>
-          <h1 className={styles["layout__title"]}>Agenda de Churras</h1>
+          <h1 className={"layout__title"}>Agenda de Churras</h1>
         </header>
         <main>{children}</main>
-        <footer className={styles["layout__footer"]}>
+        <footer className={"layout__footer"}>
           <Image src={Logo} alt="Logo trinca" />
         </footer>
       </body>
