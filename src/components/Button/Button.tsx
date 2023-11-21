@@ -1,10 +1,22 @@
 import { FC } from "react"
 import { ButtonProps } from "@/components/Button/button.types"
-import styles from "@/components/Button/button.module.scss"
+import  "@/components/Button/button.styles.scss"
+import clsx from "clsx";
 
 const Button: FC<ButtonProps> = (props) => {
-  const { type = "button", ...restProps } = props;
-  return <button className={styles["tri-button"]} type={type} {...restProps} />;
+  const { type = "button", fullWidth, ...restProps } = props;
+  return (
+    <button
+      className={
+        clsx("tri-button",
+        {
+          ["tri-button--full-width"]: fullWidth,
+        })
+      }
+      type={type}
+      {...restProps}
+    />
+  );
 }
 
 export default Button

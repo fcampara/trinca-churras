@@ -1,0 +1,50 @@
+@import "@/styles/variable.module.scss";
+
+$size: 25px;
+$border-size: 3px;
+
+.tri-checkbox {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  & > {
+    input[type="checkbox"] {
+      cursor: pointer;
+      -webkit-appearance: none;
+      appearance: none;
+      border: none;
+      margin: 0;
+      font: inherit;
+      color: currentColor;
+      width: $size;
+      height: $size;
+      border: $border-size solid $primary-dark-color;
+      border-radius: 50%;
+      transform: translateY(-0.075em);
+      display: grid;
+      place-content: center;
+
+      &:is(:checked) {
+        border-width: 0px;
+      }
+    }
+
+    input[type="checkbox"]::before {
+      content: "";
+      width: $size;
+      height: $size;
+      border-radius: 50%;
+      transform: scale(0);
+      box-shadow: inset $size $size $primary-color;
+    }
+
+    input[type="checkbox"]:checked::before {
+      transform: scale(1);
+      width: $size;
+      height: $size;
+    }
+  }
+}
