@@ -1,34 +1,22 @@
 import CardSchedule from "@/app/agenda/components/CardSchedule";
 import styles from "@/app/agenda/agenda.module.scss"
+import { getSchedules } from "@/services/schedule"
 
-const PageSchedule = () => {
+const PageSchedule = async () => {
+  const schedules = await getSchedules();
+
   return (
     <div>
       <ul className={styles["agenda--list"]}>
-        <CardSchedule
-          amount={280}
-          date={new Date("12/01/2023")}
-          title="Níver do Gui"
-          totalPeople={15}
-        />
-        <CardSchedule
-          amount={400}
-          date={new Date("23/12/2023")}
-          title="Teste"
-          totalPeople={4}
-        />
-        <CardSchedule
-          amount={140}
-          date={new Date("01/06/2023")}
-          title="Teste"
-          totalPeople={4}
-        />
-        <CardSchedule
-          amount={54.3}
-          date={new Date()}
-          title="Teste"
-          totalPeople={4}
-        />
+        {schedules.map((schedule) => (
+          <CardSchedule
+            key={schedule.id}
+            amount={schedule.amount}
+            date={new Date(schedule.date)}
+            title={schedule.title}
+            totalPeople={schedule.totalPeople}
+          />
+        ))}
       </ul>
     </div>
   );
