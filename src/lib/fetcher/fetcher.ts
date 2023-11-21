@@ -1,12 +1,46 @@
-async function fetcher<T>(input: string, init?: RequestInit): Promise<T> {
-  const url = new URL(input, "http://localhost:3001").toString()
-  const res = await fetch(url, init)
+class Fetcher {
+  basePath: string
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch data")
+  constructor() {
+    this.basePath = "http://localhost:3001"
   }
 
-  return res.json()
+  private makeURL(path: string) {
+    return new URL(path, this.basePath).toString()
+  }
+
+  private async call(input: string, init?: RequestInit) {
+    const url = this.makeURL(input)
+    const res = await fetch(url, {
+      ...init,
+      headers: {
+        "Content-Type": "application/json",
+      }
+    })
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch data")
+    }
+
+    return res.json()
+  }
+
+  get<T>(url: string): Promise<T> {
+    return this.call(url, {
+      method: "GET"
+    })
+  }
+
+  post(url: string, data?: {
+    body: Record<string, any>
+  }) {
+    return this.call(url, {
+      method: "POST",
+      body: JSON.stringify(data?.body || {})
+    })
+  }
 }
 
-export { fetcher }
+const fetcher = new Fetcher()
+
+export default fetcher

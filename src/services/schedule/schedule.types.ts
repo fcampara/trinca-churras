@@ -1,3 +1,4 @@
+
 export interface ScheduleDTO {
   id: number;
   amount: number;
@@ -5,3 +6,6 @@ export interface ScheduleDTO {
   title: string
   totalPeople: number
 }
+
+export type CreateScheduleDTO = Omit<ScheduleDTO, "id">
+
