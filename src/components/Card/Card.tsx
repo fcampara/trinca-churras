@@ -16,7 +16,7 @@ const Card = <T extends CardElement = "div">(props: CardProps<T>) => {
     tag,
     {
       className: clsx("card", className, {
-        [`card--${color}`]: true
+        [`card--${color}`]: true,
       }),
       ...restProps,
     },

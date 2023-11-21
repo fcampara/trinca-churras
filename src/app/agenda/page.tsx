@@ -1,4 +1,4 @@
-import CardSchedule from "@/app/agenda/components/CardSchedule";
+import {CardSchedule, CardAdd } from "@/app/agenda/components";
 import styles from "@/app/agenda/agenda.module.scss"
 import { getSchedules } from "@/services/schedule"
 
@@ -17,6 +17,7 @@ const PageSchedule = async () => {
             totalPeople={schedule.totalPeople}
           />
         ))}
+        <CardAdd/>
       </ul>
     </div>
   );
