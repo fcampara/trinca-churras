@@ -1,5 +1,40 @@
+@import "@/styles/variable.module.scss";
+
 .agenda-detail {
   display: grid;
   grid-template-columns: repeat(2, auto);
   justify-content: space-between;
+}
+
+.agenda-detail__list {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  margin-top: 48px;
+
+  & > li {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid $primary-color;
+    & > label {
+      flex: 1;
+    }
+  }
+
+  :has(:checked) .agenda-detail__list-price {
+    text-decoration: line-through;
+  }
+}
+
+
+.agenda-detail__list-price {
+  color: $black-light-color;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.agenda-detail__add {
+  margin-top: 32px;
 }

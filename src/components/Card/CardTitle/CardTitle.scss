@@ -15,3 +15,9 @@
     line-height: 24.65px;
   }
 }
+
+.card-title__color {
+  &-light {
+    color: $black-light-color
+  }
+}

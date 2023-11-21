@@ -9,6 +9,9 @@ $border-size: 3px;
   align-items: center;
   cursor: pointer;
   box-sizing: border-box;
+  font-size: 21px;
+  font-weight: 700;
+  color: $black-light-color;
 
   & > {
     input[type="checkbox"] {

@@ -64,5 +64,63 @@
       "date": "3233-02-23",
       "id": 9
     }
+  ],
+  "people": [
+    {
+      "name": "Alice",
+      "value": 20
+    },
+    {
+      "name": "Beto",
+      "value": 20
+    },
+    {
+      "name": "Diego B.",
+      "value": 20
+    },
+    {
+      "name": "Dieog P.",
+      "value": 10
+    },
+    {
+      "name": "Fernando",
+      "value": 20
+    },
+    {
+      "name": "Gabriel",
+      "value": 20
+    },
+    {
+      "name": "Leonardo",
+      "value": 10
+    },
+    {
+      "name": "Marcus J.",
+      "value": 20
+    },
+    {
+      "name": "Michele",
+      "value": 20
+    },
+    {
+      "name": "Paulo",
+      "value": 20
+    },
+    {
+      "name": "Rafael S.",
+      "value": 20
+    },
+    {
+      "name": "Ruan",
+      "value": 20
+    },
+    {
+      "name": "Thales",
+      "value": 20
+    },
+    {
+      "name": "Wait",
+      "value": 20
+    }
   ]
 }
