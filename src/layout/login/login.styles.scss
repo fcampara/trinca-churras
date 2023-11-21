@@ -1,8 +1,8 @@
-@import "../styles/variable.module.scss";
+@import "@/styles/variable.module.scss";
 
 .layout {
   background-color: $primary-color;
-  background-image: url("../assets/images/background.svg");
+  background-image: url("../../assets/images/background.svg");
 
   &:after {
     z-index: -1;

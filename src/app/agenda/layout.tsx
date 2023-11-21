@@ -1,10 +1,1 @@
-import "@/app/agenda/layout.scss"
-
-export default function ScheduleLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-
-  return children;
-}
+export { default } from "@/layout/default";
