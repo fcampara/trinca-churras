@@ -12,3 +12,8 @@ export const createSchedule = async (payload: CreateScheduleDTO) => {
   })
   return res
 }
+
+export const getScheduleById = async (id: string) => {
+  const res = await fetcher.get<ScheduleDTO>(`/schedules/${id}`)
+  return res
+}

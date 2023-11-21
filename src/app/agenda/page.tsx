@@ -9,15 +9,9 @@ const PageSchedule = async () => {
     <div>
       <ul className={styles["agenda--list"]}>
         {schedules.map((schedule) => (
-          <CardSchedule
-            key={schedule.id}
-            amount={schedule.amount}
-            date={new Date(schedule.date)}
-            title={schedule.title}
-            totalPeople={schedule.totalPeople}
-          />
+          <CardSchedule key={schedule.id} {...schedule} />
         ))}
-        <CardAdd/>
+        <CardAdd />
       </ul>
     </div>
   );

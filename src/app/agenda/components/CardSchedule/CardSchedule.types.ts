@@ -1,6 +1,3 @@
-export interface CardScheduleProps {
-  date: Date;
-  title: string;
-  amount: number;
-  totalPeople: number;
-}
+import { ScheduleDTO } from "@/services/schedule";
+
+export interface CardScheduleProps extends ScheduleDTO {}
